@@ -1,7 +1,13 @@
+
 {
-  "viewportWidth": 600,
-  "viewportHeight": 800,
   "baseUrl": "http://localhost:3000",
-  "defaultCommandTimeout": 4000,
-  "$schema": "https://on.cypress.io/cypress.schema.json"
+  "env":{
+    "externalEndpoint": "https://jsonplaceholder.cypress.io"
+  },
+  "retries": { "runMode": 0, "openMode": 1 },
+  "defaultCommandTimeout": 6000,
+  "pageLoadTimeout": 60000,
+  "responseTimeout": 500000,
+  "video": false,
+  "screenshotOnRunFailure": false
 }

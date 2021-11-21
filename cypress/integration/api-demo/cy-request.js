@@ -35,4 +35,8 @@ describe('CY REQUEST DEMO', () => {
         }).its('body')
         .should('have.length', 2)
     })
+    it('External Endpoint Test', ()=>{
+        cy.request('GET', `${Cypress.env('externalEndpoint')}/comments/`).as('comments')
+        cy.log(Cypress.env('externalEndpoint'))
+    })
 })

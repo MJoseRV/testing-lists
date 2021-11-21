@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Testing TodoMVC using Cypress",
   "scripts": {
-    "start": "./node_modules/.bin/json-server --static . data.json -m middleware.js --config json-server.json",
-    "cypress:open": "cypress open",
-    "cypress-e2e": "cypress run"
+    "start": "json-server --static . data.json -m middleware.js --config json-server.json",
+    "cypress:open": "cypress open --config baseUrl=http://localhost:3000",
+    "cypress-e2e": "cypress run --config baseUrl=http://localhost:3001 --env externalEndpoint=https://jsonplaceholder.typicode.com/posts/1 -b chrome --headed"
   },
   "devDependencies": {
     "cypress": "^8.4.1",
